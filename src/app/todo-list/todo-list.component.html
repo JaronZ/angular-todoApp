@@ -1,0 +1,11 @@
+<input (keyup)="onInput($event.target.value)">
+<button (click)="addTodo()">add</button>
+
+<table style="border: solid;">
+    <tr *ngFor="let item of todos">
+        <td>{{item.id}}</td>
+        <td>{{item.title}}</td>
+        <td>{{item.done}}</td>
+        <td><button (click)="removeTodo(item.id)">delete</button></td>
+    </tr>
+</table>
